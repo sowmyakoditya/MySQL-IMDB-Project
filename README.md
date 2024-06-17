@@ -132,10 +132,10 @@ SELECT DISTINCT imdb_score FROM movie_imdb_unf WHERE imdb_score NOT IN (SELECT i
 INSERT INTO content_rating (content_rating)
 SELECT DISTINCT content_rating FROM movie_content_rating_unf WHERE content_rating NOT IN (SELECT content_rating FROM content_rating);
 
-
 **Constructed Database Objects:**
 
 **Views**
+Views were created to simplify complex queries and provide a user-friendly interface for querying the database.
 
 MoviesWithGenreLangauage
 
@@ -154,6 +154,7 @@ MoviesCountByActor
 MoviesByActor
 
 **Stored Procedures:**
+Stored procedures were created to automate repetitive tasks and encapsulate complex logic.
 
 GetMoviesByLanguageAndCountry
 
@@ -164,20 +165,13 @@ GetMoviesReleasedAfterYearOrdered
 GetMoviesByContentRating
 
 **Functions:**
+Functions were created to perform reusable calculations.
 
 GrossAdjustedForInflation
 
 AverageIMDBRatingForActor
 
 TotalGrossByGenre
-
-**Reverse Engineering:**
-
-The initial ERD considered intersection tables for relationships like movie_director, but upon closer analysis, adjustments were made to reflect the correct relationships:
-
-The relationship between movies and directors is Many-to-One (M:1).
-
-The relationship between movies and IMDB scores is also Many-to-One (M:1).
 
 **Results:**
 
