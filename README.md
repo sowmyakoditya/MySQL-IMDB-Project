@@ -63,8 +63,13 @@ Before importing the data into MySQL, several preprocessing steps were carried o
 **Objective:** Normalize data related to countries, IMDB scores, languages, and content ratings.
 
 **Steps:**
+
 **Creating Individual Tabs:** Separated the columns for "country," "imdb_score," "language," and "content_rating" into individual tabs in Excel. 
 
 **Combining with Movie ID:** In each tab, combined "movie_id" with the respective data (e.g., "movie_id" and "country" in one tab, "movie_id" and "language" in another tab).
 
 **Saving as CSV:** Saved all tabs as CSV files with the "CSV UTF-8 (comma delimited) (.csv)" extension.
+
+By following these preprocessing steps, the data was organized and cleaned, ready for import into MySQL. This ensured that the database was well-structured and prepared for further analysis and query operations.
+
+
