@@ -31,53 +31,48 @@ Before importing the data into MySQL, several preprocessing steps were carried o
 
 **Method:** Added a new column called "movie_id" in Excel and populated it with unique values for each movie record.
 
-**3. Genre Data Transformation:**
+**3. Import Movies Data:**
 
-**Objective:** Normalize genre data to create a structured format suitable for relational database management. 
+Imported the unnormalized dataset "movies-unf" using phpMyAdmin.
 
-**Steps:**
+**4. Genre Data Transformation:**
 
-**Copying Columns:** Copied the "movie_id" and "genre" columns from the unnormalized dataset ("movies-unf") to a separate tab in Excel.
+• Copied the "movie_id" and "genre" columns from "movies-unf" to a separate tab. 
 
-**Text to Columns:** Used the "Text to Columns" feature in Excel, specifying a delimiter (e.g., pipe '|'), to split genres into unique columns.
+• Utilized the "Text to Columns" feature, specifying delimiter settings (e.g., pipe), to 
+create unique columns for each genre. 
 
-**Saving as CSV:** Saved the transformed data as a CSV file with the "CSV UTF-8 (comma delimited) (.csv)" extension.
+• Saved this transformed data as a CSV file with "CSV UTF-8 (comma delimited) 
+(.csv)" extension. 
 
-**Import Genre Data:**
+**5. Import Genre Data:**
 
-**Objective:** Import the normalized genre data into MySQL.
+Imported the unnormalized dataset "movie_genre-unf" using phpMyAdmin. 
 
-**Method:** Used phpMyAdmin to import the CSV file ("movie_genre-unf") into the MySQL database.
+**6. Repeat for Actors and Plot Keywords:**
 
-**4. Repeat for Actors and Plot Keywords:**
-
-**Objective:** Normalize and import data for actors and plot keywords. 
-
-**Steps:**
-
-**Data Transformation:** Followed the same steps as genre data transformation (copying columns, using text to columns, and saving as CSV).
-
-**Data Import:** Imported the transformed data into MySQL using phpMyAdmin.
+Followed the same steps (steps 4 to 5) for actors and plot keywords, creating separate 
+tabs and applying text-to-columns for data transformation.
 
 **5. Separate Columns:**
 
-**Objective:** Normalize data related to countries, IMDB scores, languages, and content ratings.
+ Separated the columns for "country," "imdb_score," "language," and "content_rating" 
+into individual tabs.
 
-**Steps:**
+• In each tab, combined "movie_id" with the respective data (e.g., "movie_id" and 
+"country" in one tab, "movie_id" and "language" in another tab).
 
-**Creating Individual Tabs:** Separated the columns for "country," "imdb_score," "language," and "content_rating" into individual tabs in Excel. 
+• Saved all tabs with "CSV UTF-8 (comma delimited) (.csv)" extension. 
 
-**Combining with Movie ID:** In each tab, combined "movie_id" with the respective data (e.g., "movie_id" and "country" in one tab, "movie_id" and "language" in another tab).
+6. **Imported Additional Data:**
 
-**Saving as CSV:** Saved all tabs as CSV files with the "CSV UTF-8 (comma delimited) (.csv)" extension.
+Imported the unnormalized datasets "movie_language-unf," "movie_country-unf," 
+"movie_content_rating-unf," and "movie_imdb_score-unf" into the MySQL database 
+using phpMyAdmin.
 
 By following these preprocessing steps, the data was organized and cleaned, ready for import into MySQL. This ensured that the database was well-structured and prepared for further analysis and query operations.
 
-**Tables creation in MySQL:**
 
-Created seperate tables for movie, genre, movie_genre, plot_keyword, movie_plot_keyword, actor, movie_actor, director, language, country, imdb, content_rating
-
-Performed join operations to move data to repective tables
 
 
 
