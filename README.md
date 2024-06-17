@@ -74,6 +74,43 @@ By following these preprocessing steps, the data was organized and cleaned, read
 
 Started creating tables movie, genre, movie_genre, plot_keyword, movie_plot_keyword, actor, movie_actor, director, language, country, imdb, content_rating and inserted the values to respective tables by performing joins.
 
+**Constructed Database Objects:**
+
+**Views**
+
+MoviesWithGenreLangauage
+
+MovieWithPlotKeywordAndContentrating
+
+MovieWithGenre
+
+MovieWithPlotkeyword
+
+MoviesWithLanguage
+
+MoviesWithCountry
+
+MoviesCountByActor
+
+MoviesByActor
+
+**Stored Procedures:**
+
+GetMoviesByLanguageAndCountry
+
+GetMoviesReleasedAfterDate
+
+GetMoviesReleasedAfterYearOrdered
+
+GetMoviesByContentRating
+
+**Functions:**
+
+GrossAdjustedForInflation
+
+AverageIMDBRatingForActor
+
+TotalGrossByGenre
 
 
 
