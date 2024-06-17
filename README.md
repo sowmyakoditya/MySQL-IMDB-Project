@@ -73,6 +73,14 @@ Before importing the data into MySQL, several preprocessing steps were carried o
 
 By following these preprocessing steps, the data was organized and cleaned, ready for import into MySQL. This ensured that the database was well-structured and prepared for further analysis and query operations.
 
+**Tables creation in MySQL:**
+
+Created seperate tables for movie, genre, movie_genre, plot_keyword, movie_plot_keyword, actor, movie_actor, director, language, country, imdb, content_rating
+
+Performed join operations to move data to repective tables
+
+
+
 
 
 
