@@ -72,7 +72,66 @@ using phpMyAdmin.
 
 By following these preprocessing steps, the data was organized and cleaned, ready for import into MySQL. This ensured that the database was well-structured and prepared for further analysis and query operations.
 
+## Database Creation and Data Insertion:
+
 Started creating tables movie, genre, movie_genre, plot_keyword, movie_plot_keyword, actor, movie_actor, director, language, country, imdb, content_rating and inserted the values to respective tables by performing joins.
+
+**1. Creating Tables:**
+
+Created tables movie, genre, movie_genre, plot_keyword, movie_plot_keyword, actor, movie_actor, director, language, country, imdb, and content_rating.
+
+**2. Inserting Data:**
+
+Inserted values into the respective tables by performing joins and ensuring data integrity.
+
+INSERT INTO movie (movie_id, movie_title, color, duration, gross, imdb_url, language, country, content_rating, budget, title_year, imdb_score, aspect_ratio)
+SELECT DISTINCT movie_id, movie_title, color, duration, gross, movie_imdb_link, language, country, content_rating, budget, title_year, imdb_score, aspect_ratio 
+FROM movies_unf;
+
+INSERT INTO director (director)
+SELECT DISTINCT director_name FROM movie_director_unf WHERE director_name NOT IN (select director from director);
+
+INSERT INTO movie_director(movie_id, director_id)
+SELECT mdu.movie_id, d.director_id
+FROM movie_director_unf mdu 
+JOIN director d ON mdu.director_name = d.director;
+
+INSERT INTO actor (actor_name)
+SELECT DISTINCT actor_3_name FROM movie_actor_unf WHERE actor_3_name NOT IN (select actor_name from actor);
+
+INSERT INTO movie_actor (movie_id, actor_id)
+SELECT mau.movie_id, a.actor_id
+FROM movie_actor_unf mau 
+JOIN actor a ON mau.actor_3_name = a.actor_name;
+
+INSERT INTO plot_keyword (plot_keyword)
+SELECT DISTINCT plot_keywords5 FROM movie_plot_keywords_unf WHERE plot_keywords5 NOT IN (select plot_keyword from plot_keyword);
+
+INSERT INTO movie_plot_keyword (movie_id, plot_keyword_id)
+SELECT mpku.movie_id, pk.plot_keyword_id
+FROM movie_plot_keywords_unf mpku 
+JOIN plot_keyword pk ON mpku.plot_keywords5 = pk.plot_keyword;
+
+INSERT INTO genre (genre)
+SELECT DISTINCT genre8 FROM movie_genre_unf WHERE genre8 NOT IN (select genre from genre);
+
+INSERT INTO movie_genre (movie_id, genre_id)
+SELECT mgu.movie_id, g.genre_id
+FROM movie_genre_unf mgu 
+JOIN genre g ON mgu.genre8 = g.genre;
+
+INSERT INTO language (language)
+SELECT DISTINCT language FROM movie_language_unf WHERE language NOT IN (select language from language);
+
+INSERT INTO country (country)
+SELECT DISTINCT country FROM movie_country_unf WHERE country NOT IN (select country from country);
+
+INSERT INTO imdb (imdb_score)
+SELECT DISTINCT imdb_score FROM movie_imdb_unf WHERE imdb_score NOT IN (SELECT imdb_score FROM imdb);
+
+INSERT INTO content_rating (content_rating)
+SELECT DISTINCT content_rating FROM movie_content_rating_unf WHERE content_rating NOT IN (SELECT content_rating FROM content_rating);
+
 
 **Constructed Database Objects:**
 
