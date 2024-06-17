@@ -54,7 +54,7 @@ Imported the unnormalized dataset "movie_genre-unf" using phpMyAdmin.
 Followed the same steps (steps 4 to 5) for actors and plot keywords, creating separate 
 tabs and applying text-to-columns for data transformation.
 
-**5. Separate Columns:**
+**7. Separate Columns:**
 
  Separated the columns for "country," "imdb_score," "language," and "content_rating" 
 into individual tabs.
@@ -64,7 +64,7 @@ into individual tabs.
 
 • Saved all tabs with "CSV UTF-8 (comma delimited) (.csv)" extension. 
 
-6. **Imported Additional Data:**
+**8. Imported Additional Data:**
 
 Imported the unnormalized datasets "movie_language-unf," "movie_country-unf," 
 "movie_content_rating-unf," and "movie_imdb_score-unf" into the MySQL database 
