@@ -3,7 +3,11 @@
 
 
 **Technologies Used:**
+
 **Database Management System:** MySQL
+
 **Data Import Tool:** phpMyAdmin
+
 **Programming Language:** SQL
+
 **Dataset Source:** Kaggle - IMDB Score Prediction for Movies
