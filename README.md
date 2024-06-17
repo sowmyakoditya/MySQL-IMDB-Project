@@ -72,6 +72,9 @@ using phpMyAdmin.
 
 By following these preprocessing steps, the data was organized and cleaned, ready for import into MySQL. This ensured that the database was well-structured and prepared for further analysis and query operations.
 
+Started creating tables movie, genre, movie_genre, plot_keyword, movie_plot_keyword, actor, movie_actor, director, language, country, imdb, content_rating and inserted the values to respective tables by performing joins.
+
+
 
 
 
