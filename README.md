@@ -74,3 +74,5 @@ Before importing the data into MySQL, several preprocessing steps were carried o
 By following these preprocessing steps, the data was organized and cleaned, ready for import into MySQL. This ensured that the database was well-structured and prepared for further analysis and query operations.
 
 
+
+
