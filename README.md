@@ -112,6 +112,22 @@ AverageIMDBRatingForActor
 
 TotalGrossByGenre
 
+**Reverse Engineering:**
+
+The initial ERD considered intersection tables for relationships like movie_director, but upon closer analysis, adjustments were made to reflect the correct relationships:
+
+The relationship between movies and directors is Many-to-One (M:1).
+
+The relationship between movies and IMDB scores is also Many-to-One (M:1).
+
+**Results:**
+
+Created a well-structured and scalable database that supports complex queries and analyses.
+
+Improved data organization and retrieval efficiency.
+
+Enabled detailed insights into movie data, genres, actors, directors, and other related entities.
+
 
 
 
