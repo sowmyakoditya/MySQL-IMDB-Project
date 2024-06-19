@@ -17,7 +17,7 @@ The MYSQL-IMDB project is focused on creating a comprehensive database of movies
 
 ![image](https://github.com/sowmyakoditya/MySQL-IMDB-Project/assets/166762015/4a6a301b-4c65-4b77-b5d0-32e9c9a4b215)
 
-**Preprocessing Steps:**
+## Preprocessing Steps:
 
 **Data Preprocessing:**
 
@@ -136,7 +136,7 @@ SELECT DISTINCT imdb_score FROM movie_imdb_unf WHERE imdb_score NOT IN (SELECT i
 INSERT INTO content_rating (content_rating)
 SELECT DISTINCT content_rating FROM movie_content_rating_unf WHERE content_rating NOT IN (SELECT content_rating FROM content_rating);
 
-**Constructed Database Objects:**
+## Constructed Database Objects:
 
 **Views**
 Views were created to simplify complex queries and provide a user-friendly interface for querying the database.
@@ -185,7 +185,7 @@ The relationship between movies and directors is Many-to-One (M:1).
 
 The relationship between movies and IMDB scores is also Many-to-One (M:1).
 
-**Results:**
+## Results:
 
 Created a well-structured and scalable database that supports complex queries and analyses.
 
