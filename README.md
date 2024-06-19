@@ -13,7 +13,7 @@ The MYSQL-IMDB project is focused on creating a comprehensive database of movies
 
 **Dataset Source:** Kaggle - IMDB Score Prediction for Movies (https://www.kaggle.com/code/saurav9786/imdb-score-prediction-for-movies)
 
-**Entity Relational Diagram:**
+## Entity Relationaship Diagram:
 
 ![image](https://github.com/sowmyakoditya/MySQL-IMDB-Project/assets/166762015/4a6a301b-4c65-4b77-b5d0-32e9c9a4b215)
 
