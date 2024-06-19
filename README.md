@@ -185,6 +185,8 @@ The relationship between movies and directors is Many-to-One (M:1).
 
 The relationship between movies and IMDB scores is also Many-to-One (M:1).
 
+![image](https://github.com/sowmyakoditya/MySQL-IMDB-Project/assets/166762015/f845409e-58dd-4517-9922-6f566f2639ea)
+
 ## Results:
 
 Created a well-structured and scalable database that supports complex queries and analyses.
